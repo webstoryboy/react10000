@@ -48,9 +48,7 @@ class ReactDetail extends React.Component {
                 <div className="refer__cont">
                   <div className="refer-detail">
                     <h3>{location.state.title}</h3>
-                    <p className="desc">
-                      &lt;a&gt; 태그는 다른 페이지 이동을 설정합니다.
-                    </p>
+                    <p className="desc">{location.state.desc2}</p>
                     <div className="detail-info">
                       <table>
                         <thead>
