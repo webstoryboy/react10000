@@ -47,7 +47,7 @@ class Reference extends React.Component {
       data: {
         data: { htmlRefer },
       },
-    } = await axios.get("../../assets/json/referHtml.json");
+    } = await axios.get("https://webstoryboy.github.io/dothome1/refer.json");
 
     this.setState({ htmlRefer, isLoading: false });
     console.log(htmlRefer);
@@ -91,9 +91,14 @@ class Reference extends React.Component {
                             key={refer.id}
                             id={refer.id}
                             title={refer.title}
-                            desc={refer.desc}
-                            category={refer.category}
-                            property={refer.property}
+                            desc1={refer.desc1}
+                            desc2={refer.desc1}
+                            element={refer.element}
+                            tag={refer.tag}
+                            version={refer.version}
+                            view={refer.view}
+                            use={refer.use}
+                            definition={refer.definition}
                           />
                         ))}
                       </ul>
