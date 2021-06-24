@@ -25,6 +25,27 @@
           "원칙적으로 <a> 태그는 블록구조를 포함 할 수 없지만, HTML5에서는 <a> 태그는 블록 요소를 포함할 수 있습니다.",
           "href='#'의 페이지 지정을 막기 위해 javascript:void(0)를 사용하는 것보다 <button> 태그를 사용하는 것이 바람직합니다."
         ]
+      },{
+        "id": 2,
+        "link": "https://webzz.tistory.com/230",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://blog.kakaocdn.net/dn/xHBTl/btq4MCAZmT3/jMSGkKKZNkgZwUOhApsK41/img.png",
+        "title": "<abbr>",
+        "desc1": "<abbr> 태그는 줄임말이나 머리글자를 표현하는데 사용합니다. abbr은 abbreviation의 약자로, "약자 또는 생략어"라는 의미를 가집니다. title 속성을 사용하여 전체 단어를 지정 할 수 있으며, <dfn> 태그와 같이 사용하여 정의할 수 있습니다.",
+        "desc2": "<abbr> 태그는 줄임말이나 머리글자를 표현하는데 사용합니다.",
+        "element": "인라인 구조(Inline Element)",
+        "tag": "닫는 태그 사용(<abbr> ~ </abbr>)",
+        "version": "HTML4",
+        "view": "점선(브라우저마다 틀림) 및 툴팁",
+        "use": "★☆☆" ,
+        "definition": [
+          "<abbr> 태그는 abbreviation의 약자로, '약자 또는 생략어'라는 의미를 가집니다.",
+          "<abbr> 태그를 사용할 경우 번역 시스템이나 검색 시스템에게 유용한 정보를 제공합니다.",
+          "<abbr> 태그는 title 속성을 사용하여 전체 단어를 지정 할 수 있습니다.",
+          "<abbr> 태그는 <dfn> 태그와 같이 사용하여 정의할 수 있습니다.",
+          "<abbr> 태그에 아이디를 설정하여, <a> 링크로 참조할 수 있습니다.",
+          "<abbr> 태그는 시각적으로는 점선이 표시되지만 브라우저마다 표시가 다를 수 있습니다.",
+          "<abbr> 태그는 title 속성을 설정할 경우 마우스 오버시 툴팁 형식으로 약어가 표시됩니다."
+        ]
       }
     ]
   }
