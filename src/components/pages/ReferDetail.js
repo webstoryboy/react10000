@@ -85,8 +85,8 @@ class ReactDetail extends React.Component {
                     </div>
                     <h4>정의(Definition)</h4>
                     <ul className="list">
-                      {location.state.definition.map((defer, index) => (
-                        <li>{defer[index]}</li>
+                      {location.state.definition.map((defer) => (
+                        <li>{defer}</li>
                       ))}
                     </ul>
                   </div>
