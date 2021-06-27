@@ -2,15 +2,32 @@ import React from "react";
 import Header from "../basics/Header";
 import Layout from "../basics/Layout";
 import FooterInfo from "../basics/FooterInfo";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 
-// function ReactDetail(props) {
+
+// function ReferDetail(props) {
 //   console.log(props);
-//   return <span>{props.location.state.desc}</span>;
+//   return <span>{props.location.state}</span>;
 // }
 
-class ReactDetail extends React.Component {
+class ReferDetail extends React.Component {
+  componentDidMount() {
+    const { location, history } = this.props;
+    if (location.state === undefined) {
+      history.push("/reference");
+      console.log(history)
+    }
+
+    document.querySelector("body").classList.add("light");
+    this.startAnimation();
+  }
+
   startAnimation = () => {
+    gsap.to("#header", {
+      duration: 0.4,
+      top: 0,
+    });
     gsap.to(".refer__cont", {
       duration: 0.4,
       y: 0,
@@ -18,27 +35,15 @@ class ReactDetail extends React.Component {
       opacity: 1,
       ease: "power3.out",
     });
-    gsap.to("#header", {
-      duration: 0.4,
-      top: 0,
-      delay: 1,
-    });
   };
-  componentDidMount() {
-    const { location, history } = this.props;
-    //console.log(location, history);
-
-    if (location.state === undefined) {
-      history.push("/reference");
-    }
-    document.querySelector("body").classList.add("light");
-
-    this.startAnimation();
-  }
 
   render() {
     const { location } = this.props;
-    if (location.state) {
+    console.log(location.state);
+    
+    if (location.state === undefined){
+      return <div>잘못된 페이지입니다.</div>
+    } else {
       return (
         <div id="wrap">
           <Header color="light" />
@@ -84,10 +89,11 @@ class ReactDetail extends React.Component {
                     <h4>정의(Definition)</h4>
                     <ul className="list">
                       {location.state.definition.map((defer) => (
-                        <li>{defer}</li>
+                        <li key={defer.toString()}>{defer}</li>
                       ))}
                     </ul>
                   </div>
+                  <Link className="refer-list" to="/reference">목록보기</Link>
                 </div>
               </div>
             </section>
@@ -96,7 +102,11 @@ class ReactDetail extends React.Component {
         </div>
       );
     }
+   
+   
+
   }
 }
 
-export default ReactDetail;
+
+export default ReferDetail;

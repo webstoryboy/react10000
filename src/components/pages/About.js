@@ -87,7 +87,7 @@ class About extends React.Component {
       document.querySelector("body").classList.remove("black");
       document.querySelector("body").classList.add("light");
       this.getSite();
-    }, 5000);
+    }, 1000);
   }
 
   render() {

@@ -173,7 +173,7 @@
   margin-top: 200px;
 
   h3 {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 10px;
   }
   h4 {
@@ -208,6 +208,7 @@
 
       td,
       th {
+        font-weight: normal;
         padding: 14px 12px 12px 12px;
         line-height: 1.5;
         vertical-align: middle;
@@ -218,10 +219,91 @@
   }
 }
 
-// youtube 페이지
-#youCont {
+.refer-list {
+  margin-top: 50px;
+  border: 1px solid #dad8d1;
+  text-align: center;
+  display: block;
+  font-family: "S-CoreDream-3Light";
+  padding: 20px;
+  transition: all 0.3s;
 }
-.you__cont {
+.refer-list:hover {
+  background: #000;
+  color: #fff;
+}
+
+// youtube 페이지
+#youtubeCont {
+  background-color: #f0eeeb;
+}
+.youtube__cont {
+  padding-bottom: 100px;
+  opacity: 0;
+  transform: translateY(50px);
+
+  .site {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 200px;
+  }
+
+  .site h2 {
+    font-size: 40px;
+    padding-bottom: 20px;
+    flex: 0 0 100%;
+    font-family: "Chosunilbo_myungjo";
+  }
+
+  .site .left {
+    flex: 0 0 35%;
+  }
+
+  .site .right {
+    font-family: "Chosunilbo_myungjo";
+    font-size: 18px;
+    flex: 0 0 60%;
+  }
+
+  .site .right dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .site .right dt {
+    flex: 0 0 20%;
+  }
+
+  .site .right dd {
+    flex: 0 0 80%;
+    padding-bottom: 30px;
+  }
+}
+.youtube__search {
+}
+.youtube__search h2 {
+  font-size: 40px;
+  padding-bottom: 20px;
+  font-family: "Chosunilbo_myungjo";
+}
+.youtube__list {
+  margin-bottom: 300px;
+}
+.youtube__list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    flex: 0 0 19%;
+
+    .title {
+      font-family: "Chosunilbo_myungjo";
+      padding: 5px 0 15px;
+    }
+  }
 }
 
 // contact 페이지

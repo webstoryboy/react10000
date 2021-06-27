@@ -1,19 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Prototypes from "prop-types";
+import propType from "prop-types";
 
-function ReferInfo({
-  id,
-  title,
-  desc1,
-  desc2,
-  element,
-  tag,
-  version,
-  view,
-  use,
-  definition,
-}) {
+function ReferInfo({ id, title, desc1, desc2, definition, element, tag, version, view, use }) {
   return (
     <li>
       <Link
@@ -41,10 +30,11 @@ function ReferInfo({
   );
 }
 
-ReferInfo.prototype = {
-  id: Prototypes.number.isRequired,
-  title: Prototypes.number.isRequired,
-  desc: Prototypes.number.isRequired,
+ReferInfo.propType = {
+  id: propType.number.isRequired,
+  title: propType.number.isRequired,
+  desc1: propType.number.isRequired,
+  definition: propType.number.isRequired,
 };
 
 export default ReferInfo;

@@ -61,7 +61,7 @@ class Main extends React.Component {
       document.querySelector("body").classList.add("black");
       document.querySelector("body").classList.remove("light");
       this.getSite();
-    }, 2000);
+    }, 1000);
   }
 
   render() {
