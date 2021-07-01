@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 
-function YoutubeSearch({ search }) {
-  console.log(search);
+function YoutubeSearch({ search, setState }) {
+  console.log(setState);
   const inputRef = useRef();
 
   const handleSearch = () => {
     const value = inputRef.current.value;
-    search(value);
+    setState(value)
   };
 
   const onClick = () => {
